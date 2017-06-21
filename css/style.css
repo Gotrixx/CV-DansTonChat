@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FIN DU RESET */
+
+/*Bleu de lien : #2d4cae*/
+
+body{
+	background: url("../img/fond.jpg");
+}
+
+.invisible{
+	font: 0px/0 a;
+	text-shadow: none;
+	color: transparent;	
+}
+
+a{
+	text-decoration: none;
+	color: #2d4cae;
+}
+
+header{
+	background: #333;
+	width: 100%;
+	height: 38px;
+	position: fixed;
+	z-index: 10;
+}
+
+header div{
+	width: 1048px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header nav{
+	position: absolute;
+	top: 0;
+	left: 140px;
+}
+
+header ul li{
+	display: inline-block;
+}
+
+header nav a{
+	color: #fff;
+	padding: 15px 10px 12px;
+	font: 12px/38px Verdana,Arial,Helvetica,sans-serif;
+	height: auto;
+}
+
+header nav a:hover, header nav a:active{
+	background: #58733d;
+}
+
+header div a img{
+	padding-top: 2px;
+}
+
+/* BODY */
+body{
+	position: relative;
+	font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+	padding-bottom: 30px;
+}
+
+#corp{
+	width: 1048px;
+	margin: 0 auto;
+
+	position: relative;
+}
+
+#profilPic{
+	border: 10px solid #fff;
+	box-shadow: 1px 1px 5px #222;
+}
+
+#corp h2{
+	padding-top: 48px; /* 38 + 10 */
+	font-size: 32px;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+/* → */
+#corp h2:after, #corp h3:after{
+	content: " →"
+}
+
+#corp h3{
+	font-size: 24px;
+	margin: 20px 0px 10px;
+}
+
+#identite, #competences, #etude, #expPro, #hobby{
+	width: 738px;
+	margin-right: 10px;
+
+	position: relative;
+}
+
+#identite article, #competences article, #etude article, #expPro article, #hobby article{
+	font-family: "andale mono","lucida console",monospace;
+	font-size: 12px;
+	background: #fff;
+	padding: 10px 4px;
+	padding-bottom: 30px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+#identite article:hover, #competences article:hover, #etude article:hover, #expPro article:hover, #hobby article:hover{
+	background: #ffa;
+}
+
+.avis{
+	background: #efefe3;
+	width: 732px;/* 738 - 4 - 2*/
+	height: 15px;
+	padding: 2px;
+	border: 1px solid #ccc;
+	border-radius: 0px 0px 5px 5px;
+	font-family: "andale mono","lucida console",monospace;
+	font-size: 12px;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.number, .votes, .moins, .plus, .favoris, .comment{
+	position: absolute;
+}
+
+.number{
+	top: 4px;
+	left: 5px;
+}
+
+.votes{
+	top: 4px;
+	left: 60px;
+}
+
+.plus{
+	top: 4px;
+	left: 130px;
+}
+
+.moins{
+	top: 4px;
+	left: 185px;
+}
+
+.favoris{
+	top: 4px;
+	right: 135px;
+}
+
+.comment{
+	top: 4px;
+	right: 5px;
+}
+
+.avis a{
+	color: #6a6;
+}
+
+#competences li, #hobby li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#identite li:not(:last-child), #etude li:not(:last-child), #etude li:not(:last-child), #expPro li:not(:last-child), #expPro li:not(:last-child){
+	margin-bottom: 5px;
+}
+
+.date{
+	font-weight: bold;
+	color: #6a6;
+}
+
+#identite a:hover, #expPro a:hover{
+	color: #6a6;	
+}
+
+/************************/
+/* BLOC PHOTO DE DROITE */
+/************************/
+#photo{
+	width: 300px;
+	background: url("../img/fond2.jpg");
+	text-align: center;
+
+	position: absolute;
+	top: 0;
+	right: 0; /* 1048-300 */
+}
+
+#photo img{
+	width: 280px;
+	height: auto;
+	margin-top: 20px;
+	box-shadow: 1px 1px 5px 1px #222;
+}
+
+#photo img:last-child{
+	margin-bottom: 10px;
+}
+
+#imgFond{
+	position: absolute;
+	top: 948px;
+	right: 0;
+}
